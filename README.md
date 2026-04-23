@@ -11,7 +11,7 @@ Analysis Layer (The "Hard" Rules): Uses clang-tidy and cppcheck with custom rule
 Advisory Layer (The "Soft" Rules): An LLM (via API) interprets the analysis results. If a rule is broken (e.g., Rule 05: Know what functions C++ silently writes), the LLM generates a refactoring suggestion.
 
 2. Proposed Project Structure
-Since you are using Docker and Terraform, the structure separates the App Logic, the Toolchain (Docker), and the Infrastructure (Terraform).
+The structure separates the App Logic, the Toolchain (Docker), and the Infrastructure (Terraform).
 
 Plaintext
 effective-cpp-assistant/
@@ -30,9 +30,8 @@ effective-cpp-assistant/
 │       └── variables.tf
 ├── web/                     # Optional Frontend (React/Next.js)
 └── scripts/                 # Setup and local run scripts
-3. Continuous Delivery (CD) Pipeline
-For a project like this, the pipeline is your "Production Factory." It ensures that your assistant is always deployed in a container that has the exact compiler version needed to analyze modern C++.
 
+3. Continuous Delivery (CD) Pipeline
 Pipeline Stages (GitHub Actions)
 Lint & Test: Run unit tests for your engine logic.
 
@@ -47,7 +46,7 @@ Terraform Plan/Apply: Update cloud infrastructure if the terraform/ folder chang
 Deploy: Update the service (e.g., AWS ECS or Azure Container Apps) to pull the latest image.
 
 4. Implementation Strategy: The "Effective" Engine
-To make your system actually "Suggest the best way," your backend should follow this logic flow:
+The logic flow:
 
 Step 1: Run clang-tidy --export-fixes.
 
