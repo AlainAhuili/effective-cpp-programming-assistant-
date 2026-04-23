@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Assistant API",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/assistant_api",
+            "args": [],
+            "cwd": "${workspaceFolder}/api"
+        }
+    ]
+}

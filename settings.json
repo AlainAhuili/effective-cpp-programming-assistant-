@@ -1,0 +1,7 @@
+{
+    "terraform.languageServer.external": true,
+    "cmake.sourceDirectory": "${workspaceFolder}/api",
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+    "C_Cpp.codeAnalysis.clangTidy.config": "${workspaceFolder}/core-rules/.clang-tidy"
+}

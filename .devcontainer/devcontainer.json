@@ -1,0 +1,13 @@
+{
+    "name": "Effective C++ Assistant Dev Env",
+    "dockerFile": "../deployments/docker/analyzer.Dockerfile",
+    "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools",
+        "hashicorp.terraform"
+    ],
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "remoteUser": "root"
+}
